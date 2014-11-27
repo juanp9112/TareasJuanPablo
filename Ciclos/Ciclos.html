@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<title>Ciclos</title>
+	<script type= "text/javascript" charset"utf-8">
+	cars = ["BMW","Chevorlet","folkswagen"];
+	</script>
+    <style type="text/css" medio=screen>
+	
+	.marca{
+		float: left;
+		width: 100px;
+		height: 100px;
+		text-aling: center;
+		line-height: 25px;
+		background: #CCC;
+		margin: 5px;
+		border: 1px solid black;
+		
+		}
+		
+		</style>
+    
+</head>
+
+<body>
+<button onclick="myFunction()"> Ejecutar </button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+	
+	
+	var text= "";
+	var i = 1;
+	while (i < 11) {
+		text+= "<div class= 'marca'>" + i;
+		i++;
+		};
+		document.getElementById("demo").innerHtml = text;
+}
+
+</script>
+
+
+
+</body>
+</html>

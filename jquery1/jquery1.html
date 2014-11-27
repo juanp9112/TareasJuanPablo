@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<title>jQuery 1</title>
+<style type="text/css" media="screen">
+			#rojo{
+			width:200px;
+			height:200px;
+			background-color:red;
+			display:none;
+			float:left;
+			margin:10px;
+			}
+			#azul{
+			width:200px;
+			height:200px;
+			background-color:blue;
+			display:none;
+			float:left;
+			margin:10px;
+			}
+			#verde{
+			width:200px;
+			height:200px;
+			background-color:green;
+			display:none;
+			float:left;
+			margin:10px;
+			}
+				#negro{
+			width:200px;
+			height:200px;
+			background-color:black;
+			display:none;
+			float:left;
+			margin:10px;
+			}
+				#naranja{
+			width:200px;
+			height:200px;
+			background-color:orange;
+			
+			
+			float:left;
+			margin:10px;
+			}
+</style>
+
+<script type="text/javascript" charset"utf-8">
+	function aparece(){
+			$("#rojo").fadeIn(2000, function(){
+					$("#azul").fadeIn(2000);
+				});
+			};
+			
+			
+	function desaparece(){
+			$("#rojo").fadeOut(2000, function(){
+				$("#azul").fadeOut(2000);
+				});
+			};
+			
+	function toggle(){
+		$("#verde").fadeToggle(20000);
+		};
+		
+		function slide(){
+		$("#negro").slideToggle(20000);
+		};
+
+		$(document).ready(function(){
+			$("#naranja").mouseenter( function(){
+				$("#naranja").css("background", "#CCC");
+				});
+				
+				$("#naranja").mouseleave( function(){
+					$("#naranja").css("background", "orange");
+				});
+				
+				$("#naranja").click( function(){
+					$("#naranja").animate({
+						opacity:0.5,
+						width: "100px",
+				
+					},1000)
+				});
+			
+			});
+		
+
+</script>
+</head>
+
+<body>
+<input type="button" onclick"aparece();" value="Aparece" />
+<input type="button" onclick"desaparece();" value="Desaparece" />
+<input type="button" onclick"toggle();" value="Toggle" />
+<input type="button" onclick"slide();" value="Slide" />
+
+<div class="clear"></div>
+<div id="rojo"></div>
+<div id="azul"></div>
+<div id="verde"></div>
+<div id="negro"></div>
+<div id="naranja"></div>
+<div class="clear"></div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<title>Ciclos</title>
+	
+    <style type="text/css" medio=screen>
+	
+	#bloqueA{
+		height:100%;
+		background:black;
+		width:50%;
+		position:absolute;
+		float:left;
+		left:50%;
+		
+		
+		}
+		
+		
+	#bloqueB{
+		height:100%;
+		background:red;
+		width:50%;
+		position:absolute;
+		float:left;
+		left:0;
+		
+		
+		}
+		
+		</style>
+        
+
+
+
+</head>
+
+<body>
+
+<div id="bloqueA">
+	<input type="button" value="derecha" id="btn_der"></input>
+    </div>
+    
+   <div id="bloqueB">
+	<input type="button" value="izquerda" id="btn_izq"></input>
+    </div> 
+    
+    
+    <script type="text/javascript" charset="utf-8">
+		$("#btn_izq").click(function(){
+			
+			
+			if($("#bloqueB").hasClass("mini")){
+				$("#bloqueB").animate({
+					width:"50%",
+					left:"50%",
+				
+				
+				});
+				$("#bloqueB").removeClass("mini");
+				
+				$("#bloqueA").animate({
+						left:"0%",
+				});
+				
+			} else{
+				$("#bloqueB").animate({
+					width:"25%",
+					left:"0%",
+					
+					
+				});
+				$("#bloqueB").addClass("mini");
+				
+				$("#bloqueA").animate({
+						left:"100%",
+						left:"-50%"
+						
+					});
+				
+				
+				}
+			});
+			
+			
+		
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="../../../../Tarea2TecWeb1JuanPabloQuinzaños/javascript/img.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tarea2</title>
+<script type="text/javascript" src="../../../../Tarea2TecWeb1JuanPabloQuinzaños/javascript/jquery-1.10.2.min.js"></script>
+<script>
+	function checarHora()
+	{
+		var marcacion = new Date();
+		var hora = marcacion.getHours()	;
+		var minutos = marcacion.getMinutes();
+		
+		
+		if (hora == 11) 
+		{
+			$(document).ready(function() {
+				$('#content').css("backgroundImage", "url(\'tecWeb1.jpg\')");
+			}); 
+		}
+		else
+		{
+			$(document).ready(function() {
+				$('#content').css("backgroundImage", "url(\'tecWeb2.jpg\')");
+			}); 
+		}
+	}	
+	
+		
+		
+		var colores = ["#FFFFF, #d02323, #b524f1"];
+		alert (colores, lenght);
+</script>
+</head>
+
+<body id="content">
+	<button onclick="checarHora();">Checa Hora!</button>	
+    <h1>Si paso</h1>
+    
+    
+    
+</body>
+</html>
